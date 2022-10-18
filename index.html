@@ -2,15 +2,25 @@
 <html>
 	<style>
 		h1 {
-			color:lightslategray; text-align:center; background-color:gainsboro
+			color:lightslategray; 
+			text-align:center; 
+			background-color:gainsboro
 		}
 
 		body {
 			background-color:lightblue
 		}
 
-		iframe {
-			width: 50%; height: 500px; overflow: hidden; border: 1px solid red; 
+		#jomama {
+			margin:auto;
+			width: 75%; 
+			height: 1500px; 
+			overflow: hidden; 
+			gap: 25px;
+		}
+
+		html {
+			scroll-behavior: smooth;
 		}
 
 	</style>
@@ -23,8 +33,11 @@
 		Sidebar
 		</aside>
 	<body>
+		<div id = jomama>
+			<p><iframe src= game1.html width= 7500 height= 750 scrolling = yes></iframe></p>
+			<p><iframe src= game2.html width= 7500 height= 750 scrolling = yes></iframe></p>
+		</div>
+		rip
 		
-     	<p align="center"><iframe src=game1.html width=50 height=100 scrolling=no>  </iframe></p>
-		<p align="center"><iframe style="width: 50%; height: 500px; overflow: hidden; border: 1px solid blue;" src="game2.html" width="50" height="100" scrolling="no"></iframe></p>
 	</body>
 </html>
