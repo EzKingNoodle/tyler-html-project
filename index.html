@@ -1,43 +1,144 @@
 <!DOCTYPE html>
 <html>
-	<style>
-		h1 {
-			color:lightslategray; 
-			text-align:center; 
-			background-color:gainsboro
-		}
+<style>
+	h1 {
+		color: darkcyan;
+		text-align: center;
+		background-color: gainsboro
+	}
 
-		body {
-			background-color:lightblue
-		}
+	body {
+		background-color: black;
+		color: white;
+	}
 
-		#jomama {
-			margin:auto;
-			width: 75%; 
-			height: 150px; 
-			overflow: hidden; 
-			gap: 25px;
-		}
+	#frame {
+		margin: auto;
+		width: 75%;
+		height: 3100px;
+		overflow: hidden;
+		gap: 1000px;
+		/*this does not work for some reason, needs further inspection*/
+	}
 
-		html {
-			scroll-behavior: smooth;
-		}
+	html {
+		scroll-behavior: smooth;
+	}
 
-	</style>
+	.myButton {
+		color: rgb(255, 255, 255);
+		font-size: 16px;
+		line-height: 16px;
+		padding: 6px;
+		border-radius: 10px;
+		font-family: Georgia, serif;
+		font-weight: normal;
+		text-decoration: none;
+		font-style: normal;
+		font-variant: normal;
+		text-transform: none;
+		background-image: linear-gradient(to right, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 50%, rgb(20, 78, 117) 100%);
+		box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px;
+		border: 2px solid rgb(28, 110, 164);
+		display: inline-block;
+	}
 
-	<head>
-		<title>Tyler-epic-games</title>
+	.myButton:hover {
+		background: #1C6EA4;
+	}
+
+	.myButton:active {
+		background: #144E75;
+	}
+
+	aside {
+		text-align: right;
+		color: white;
+
+	}
+
+	table {
+		border: 1px solid;
+		border-color: white;
+		border-collapse: collapse;
+		width: 50%;
+	}
+
+	th {
+		border: 1px solid;
+		border-collapse: collapse;
+		height: 25px;
+		background: red;
+		text-decoration-color: whitesmoke;
+	}
+
+	td {
+		border: 1px solid;
+		border-color: white;
+		border-collapse: collapse;
+		height: 25px;
+		background-color: black;
+	}
+</style>
+
+<head>
+	<title>Tyler-epic-games</title>
 	<h1>Tyler's Epic Games >:)</h1>
-	</head>
-	<aside>
-		Sidebar
-		</aside>
-	<body>
-		<div id = jomama>
-			<p><iframe src= game1.html width= 7500 height= 750 scrolling = yes></iframe></p>
-			<p><iframe src= game2.html width= 7500 height= 750 scrolling = yes></iframe></p>
-		</div>
-		drip
+</head>
+<aside>
+	words
+</aside>
+
+<body>
+	<div id=frame>
+		<p><iframe src=game1.html width=7500 height=750 scrolling=yes></iframe></p>
+		<br>
+
+		<table style="float: right">
+			<tbody>
+				<tr>
+					<th>Leaderboards</th>
+				</tr>
+				<tr>
+					<td>1.</td>
+				</tr>
+				<tr>
+					<td>2.</td>
+				</tr>
+				<tr>
+					<td>3.</td>
+				</tr>
+				<tr>
+					<td>4.</td>
+				</tr>
+				<tr>
+					<td>5.</td>
+				</tr>
+				<tr>
+					<td>6.</td>
+				</tr>
+				<tr>
+					<td>7.</td>
+				</tr>
+				<tr>
+					<td>8.</td>
+				</tr>
+				<tr>
+					<td>9.</td>
+				</tr>
+				<tr>
+					<td>10.</td>
+				</tr>
+				
+		</table>
+
+		<br>
+		<p><iframe src=game2.html width=7500 height=750 scrolling=yes></iframe></p>
+		<br>
 		
-	</body>
+	</div>
+	drip
+
+</body>
+
 </html>
