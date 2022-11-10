@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
 <style>
-	h1 {
+	.header {
 		color: darkcyan;
 		text-align: center;
-		background-color: gainsboro
+		background-color: gainsboro;
+		margin: 0;
+		/*this does not seem to do anythng to get rid of the black gap at the top...*/
 	}
 
 	body {
 		background-color: black;
 		color: white;
+		
 	}
 
 	#frame {
@@ -18,7 +21,7 @@
 		height: 3100px;
 		overflow: hidden;
 		gap: 1000px;
-		/*this does not work for some reason, needs further inspection*/
+		/*this gap does not work for some reason, needs further inspection*/
 	}
 
 	html {
@@ -62,6 +65,8 @@
 		border-color: white;
 		border-collapse: collapse;
 		width: 50%;
+		margin-bottom: 20px;
+		
 	}
 
 	th {
@@ -81,19 +86,28 @@
 	}
 </style>
 
+<script>
+	var d = new Date();
+	let a = d.getDay();  
+	var s = "who is joe?";
+	doxument.getElementById("myText").innerHTML = s; /* does not seem to be working...*/ 
+</script>
+
+<div class = header>
 <head>
 	<title>Tyler-epic-games</title>
 	<h1>Tyler's Epic Games >:)</h1>
+	<p1> This is a test...</p1>
 </head>
+</div>
 <aside>
-	words
+	<span id="myText"> </span> <!--should display "who is joe?"-->
+	
 </aside>
 
 <body>
 	<div id=frame>
 		<p><iframe src=game1.html width=7500 height=750 scrolling=yes></iframe></p>
-		<br>
-
 		<table style="float: right">
 			<tbody>
 				<tr>
@@ -129,15 +143,12 @@
 				<tr>
 					<td>10.</td>
 				</tr>
-				
 		</table>
 
-		<br>
 		<p><iframe src=game2.html width=7500 height=750 scrolling=yes></iframe></p>
-		<br>
 		
 	</div>
-	drip
+	drip 
 
 </body>
 
