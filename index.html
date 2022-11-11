@@ -10,7 +10,7 @@
 	}
 
 	body {
-		background-color: black;
+		background-color:black;
 		color: white;
 		
 	}
@@ -86,11 +86,13 @@
 	}
 </style>
 
-<script>
-	var d = new Date();
-	let a = d.getDay();  
-	var s = "who is joe?";
-	doxument.getElementById("myText").innerHTML = s; /* does not seem to be working...*/ 
+<script> 
+	function myFunction() {
+	  var d = new Date();
+	  d = Date("Jun 23 2017 07:45:00 GMT+0100 (Tokyo Time)");
+      var number = "123";
+      document.getElementById("myText").innerHTML = d;
+    }
 </script>
 
 <div class = header>
@@ -101,11 +103,12 @@
 </head>
 </div>
 <aside>
-	<span id="myText"> </span> <!--should display "who is joe?"-->
+	
 	
 </aside>
 
-<body>
+<body onload = "myFunction()">
+	<span id="myText"> </span><!--should display "who is joe?"-->
 	<div id=frame>
 		<p><iframe src=game1.html width=7500 height=750 scrolling=yes></iframe></p>
 		<table style="float: right">
