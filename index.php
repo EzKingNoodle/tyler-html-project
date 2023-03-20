@@ -1,3 +1,14 @@
+<?php
+
+session_start();
+
+include("connection.php");
+include("functions.php");
+
+$user_data = check_login($con);
+
+?>
+
 <!DOCTYPE html>
 <html>
 <style>
@@ -109,7 +120,7 @@
 <body onload = "myFunction()">
 	<span id="myText"> </span>
 	<div id=frame>
-		<p><iframe src=game1.html width=7500 height=750 scrolling=yes></iframe></p>
+		<p><iframe src=game1.php width=7500 height=750 scrolling=yes></iframe></p>
 		<table style="float: right">
 			<tbody>
 				<tr>
@@ -147,7 +158,7 @@
 				</tr>
 		</table>
 
-		<p><iframe src=game2.html width=7500 height=750 scrolling=yes></iframe></p>
+		<p><iframe src=game2.php width=7500 height=750 scrolling=yes></iframe></p>
 		
 	</div>
 	drip 
