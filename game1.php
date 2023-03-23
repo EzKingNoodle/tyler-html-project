@@ -280,11 +280,11 @@ function loop() {
   platforms[7].x, platforms[7].y, platforms[7].width - 20,platforms[7]. height;
 
   
-  if ((player.x <= coinpos_x + 20 || player.x >= coinpos_x - 20) && (player.y <= coinpos_y + 20 || player.y >= coinpos_y - 20)) {
+  if (player.x == platforms[r].x + 20 /*|| player.x >= platforms[r].x - 20)*/ && player.y <= platforms[r].y+ 20 || player.y >= platforms[r].y - 20) {
     r = Math.floor(Math.random() * 8);
   }
-
   rendercoin(r);
+
 }
 canvas=document.getElementById("canvas");
 ctx=canvas.getContext("2d");
