@@ -7,6 +7,8 @@ include("functions.php");
 
 $user_data = check_login($con);
 
+
+
 ?>
 
 
@@ -53,7 +55,7 @@ var platforms = [];
 // Function to render the canvas
 function rendercanvas(){
 ctx.fillStyle = "#3d7819";
-ctx.fillRect(0, 0, 500, 500);
+ctx.fillRect(0, 0, 1775, 500);
 
 }
 
@@ -194,6 +196,16 @@ function keyup(e) {
 
 var r = Math.floor(Math.random() * 8);
 
+function fix_it_felix( x, y, r) {
+
+if (player.x == platforms[r].x + 20 /*|| player.x >= platforms[r].x - 20)*/ && player.y <= platforms[r].y+ 2 || player.y >= platforms[r].y - 2) {
+    r = Math.floor(Math.random() * 6); 
+    count++;
+    rendercoin(r);
+  }
+
+}
+
 function loop() {
   // If the player is not jumping apply the effect of frictiom
   if(player.jump == false) {
@@ -280,8 +292,10 @@ function loop() {
   platforms[7].x, platforms[7].y, platforms[7].width - 20,platforms[7]. height;
 
   
-  if (player.x == platforms[r].x + 20 /*|| player.x >= platforms[r].x - 20)*/ && player.y <= platforms[r].y+ 20 || player.y >= platforms[r].y - 20) {
-    r = Math.floor(Math.random() * 8);
+  if (player.x == platforms[r].x + 20 /*|| player.x >= platforms[r].x - 20)*/ && player.y <= platforms[r].y+ 2 || player.y >= platforms[r].y - 2) {
+    r = Math.floor(Math.random() * 6); 
+    count++;
+
   }
   rendercoin(r);
 
@@ -289,7 +303,7 @@ function loop() {
 canvas=document.getElementById("canvas");
 ctx=canvas.getContext("2d");
 ctx.canvas.height = 500;
-ctx.canvas.width = 500;
+ctx.canvas.width = 1800;
 createplat();
 // Adding the event listeners
 document.addEventListener("keydown",keydown);

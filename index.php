@@ -25,12 +25,13 @@ $user_data = check_login($con);
 		color: white;
 	}
 
-	#frame {
+	iframe {
 		margin: auto;
-		width: 75%;
-		height: 2300px;
+		width: 100%;
+		height: 700px;
 		overflow: hidden;
 		gap: 1000px;
+		
 		/*this gap does not work for some reason, needs further inspection*/
 	}
 
@@ -120,14 +121,14 @@ $user_data = check_login($con);
 <body onload = "myFunction()">
 	<span id="myText"> </span>
 	<div id=frame>
-		<p><iframe src=game1.php width=7500 height=750 scrolling=yes></iframe></p>
+		<p><iframe src=game1.php width=5000 height=750 scrolling=yes></iframe></p>
 		<table style="float: right">
 			<tbody>
 				<tr>
 					<th>Leaderboards</th>
 				</tr>
 				<tr>
-					<td>1.</td>
+					<td>1. <? $count ?> </td> 
 				</tr>
 				<tr>
 					<td>2.</td>
@@ -158,7 +159,7 @@ $user_data = check_login($con);
 				</tr>
 		</table>
 
-		<p><iframe src=game2.php width=7500 height=750 scrolling=yes></iframe></p>
+		<p><iframe src=game2.php width=7500 height=750 scrolling=yes align = middle></iframe></p>
 		
 	</div>
 	drip 
