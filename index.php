@@ -7,6 +7,34 @@ include("functions.php");
 
 $user_data = check_login($con);
 
+if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
+        $link = "https";
+        else $link = "http";
+          
+        // Here append the common URL characters.
+        $link .= "://";
+          
+        // Append the host(domain name, ip) to the URL.
+        $link .= $_SERVER['HTTP_HOST'];
+          
+        // Append the requested resource location to the URL
+        $link .= $_SERVER['REQUEST_URI'];
+        $url_components = parse_url($link);
+ 
+        // Use parse_str() function to parse the
+        // string passed via URL
+        parse_str($url_components['query'], $params);
+            
+        // Display result
+        $annmt = $params['aID'];
+
+        $query = "select announcement from announcements where announceID = '$annmt'";
+        $result = mysqli_query($con, $query);
+
+        $row = mysqli_fetch_array($result, MYSQLI_NUM);
+        printf ("%s (%s)\n", $row[0], $row[0]);
+
+
 ?>
 
 <!DOCTYPE html>
