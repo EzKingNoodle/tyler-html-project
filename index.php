@@ -7,7 +7,7 @@ include("functions.php");
 
 $user_data = check_login($con);
 
-if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
+/*if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
         $link = "https";
         else $link = "http";
           
@@ -32,7 +32,7 @@ if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
         $result = mysqli_query($con, $query);
 
         $row = mysqli_fetch_array($result, MYSQLI_NUM);
-        printf ("%s (%s)\n", $row[0], $row[0]);
+        printf ("%s (%s)\n", $row[0], $row[0]);*/
 
 
 ?>

@@ -195,7 +195,7 @@ function keyup(e) {
 } 
 
 var r = Math.floor(Math.random() * 8);
-
+var count = 0;
 function fix_it_felix( x, y, r) {
 
 if (player.x == platforms[r].x + 20 /*|| player.x >= platforms[r].x - 20)*/ && player.y <= platforms[r].y+ 2 || player.y >= platforms[r].y - 2) {
